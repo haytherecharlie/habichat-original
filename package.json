@@ -5,8 +5,12 @@
   "description": "Connect with your neighbors",
   "license": "SEE LICENSE IN LICENSE",
   "homepage": "https://habi.chat",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install:app": "cd app && npm run setup",
+    "install:client": "cd client && npm run setup",
+    "install:server": "cd server && npm run setup",
+    "setup": "npm run install:app && npm run install:client && npm run install:server"
   },
   "repository": {
     "type": "git",
