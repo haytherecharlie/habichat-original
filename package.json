@@ -1,0 +1,15 @@
+{
+  "name": "habichat",
+  "author": "Charlie Hay",
+  "version": "1.0.0",
+  "description": "Connect with your neighbors",
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://habi.chat",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haytherecharlie/habichat.git"
+  }
+}

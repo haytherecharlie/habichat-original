@@ -1,0 +1,14 @@
+# GENERAL
+.DS_Store
+
+# REACT NATIVE APP
+node_modules/**/*
+.expo/*
+npm-debug.*
+*.jks
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+web-report/
