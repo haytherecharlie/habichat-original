@@ -1,8 +1,5 @@
 {
-  "name": "habichat-web",
-  "version": "1.0.0",
-  "private": true,
-  "homepage": "https://habi.chat",
+  "name": "client",
   "scripts": {
     "build": "REACT_APP_ENV=production react-scripts build",
     "deploy-production": "source ./scripts/bash/deploy-production.sh",
