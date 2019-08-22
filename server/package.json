@@ -1,0 +1,56 @@
+{
+  "name": "server",
+  "scripts": {
+    "build": "babel -d ./build ./src/server.js -s",
+    "dev": "NODE_ENV=development nodemon --exec babel-node ./src/server.js",
+    "lint": "eslint ./src/server.js",
+    "mongodb": "mongod",
+    "prod": "node ./build",
+    "setup": "sh ./scripts/setup.sh",
+    "test": "jest ./src/server.js -- --coverage"
+  },
+  "dependencies": {
+    "app-module-path": "^2.2.0",
+    "bcrypt": "^3.0.6",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.4",
+    "mongoose-unique-validator": "^2.0.3",
+    "morgan": "^1.9.1",
+    "nodemailer": "^6.3.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.0.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.8.0",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!<rootDir>/node_modules/"
+    ]
+  },
+  "coverageThreshold": {
+    "global": {
+      "branches": 100,
+      "functions": 100,
+      "lines": 100,
+      "statements": 100
+    }
+  },
+  "coverageReporters": [
+    "text"
+  ],
+  "snapshotSerializers": []
+}
