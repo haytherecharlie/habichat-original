@@ -8,6 +8,14 @@ export const Post = styled.TouchableOpacity`
   justify-content: center;
 `
 
-export const PostText = styled.Text`
+export const BackTouchableOpacity = styled.TouchableOpacity`
+`
+
+export const BackText = styled.Text`
   color: #000;
 `
+
+export const ImagePlaceholder = styled.Image`
+  height: 300;
+  width: 300;
+`;
