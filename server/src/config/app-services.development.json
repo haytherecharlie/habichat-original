@@ -1,0 +1,20 @@
+{
+  "node": {
+    "env": "development",
+    "port": 3001
+  },
+  "mongoose": {
+    "url": "mongodb://localhost/habichat",
+    "options": { "useNewUrlParser": true, "useCreateIndex": true, "useFindAndModify": false }
+  },
+  "jwt": {
+    "secret": {
+      "admin": "Gc$b@sx5AsF^@fQkMk6yH&3p3$y$XaS3&Ohdk2P7zpN7W$ViJdGRVoeaZ#205ifHRcRfskO&gPJAyP4C7Uldxtn*u&YI0E8AlFV",
+      "app": "jh*P4Z^f6lRXpJg$k666Tl@VKDOG@a6Jr#yRx#@mlT92WD36Mhg2eK40bKvJRYWbkdP3SMRHH@nzMslPAk6R$kOueFtgG7EyN@N",
+      "auth": "Pv0b5AVpYi8g@uzE6k@iDucykkPrsGsD5&1e0PDO#9Tc@Vf#@I0F7liw8Et$CA73uiVc2e4a*9H9@YIn1ncmyd6%b@ZzIdiGDuM"
+    },
+    "signOptions": {},
+    "verifyOptions": { "ignoreExpiration": true },
+    "whitelist": []
+  }
+}

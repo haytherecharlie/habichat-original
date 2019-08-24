@@ -1,0 +1,24 @@
+{
+  "routes": {
+    "admin": {
+      "createCommunity": "/admin/create-community"
+    },
+    "app": {
+      "editUserProfile": "/app/edit-user-profile",
+      "createCommunityPost": "/app/create-community-post"
+    },
+    "auth": {
+      "signInWithEmail": "/auth/sign-in-with-email/:email",
+      "verifyEmail": "/auth/verify-email/:email/:pin"
+    }
+  },
+  "zoho": {
+    "host": "smtp.zoho.com",
+    "port": 465,
+    "secure": true,
+    "auth": {
+      "user": "welcome@habi.chat",
+      "pass": "WjrWKGRQeCzv"
+    }
+  }
+}
