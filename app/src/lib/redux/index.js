@@ -32,8 +32,8 @@ export const toggleModal = () => ({
   type: 'TOGGLE_MODAL'
 })
 
-const initialAppState = { noInternet: false, showModal: false }
-const initialAuthState = { signedIn: true }
+const initialAppState = { noInternet: false, showModal: true }
+const initialAuthState = { signedIn: false }
 const initialContentState = mockContent
 const initialProfileState = mockProfile
 const rootReducer = combineReducers({

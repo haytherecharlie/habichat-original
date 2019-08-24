@@ -5,6 +5,8 @@ export const Modal = styled.Modal``
 
 export const ModalContainer = styled.View`
   flex: 1;
+  margin: 40px 20px 20px 20px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -13,16 +15,16 @@ export const ModalContainer = styled.View`
 `
 
 export const HeaderContainer = styled.View`
-  flex: 0 0 100px;
+  flex: 0 0 50px;
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: flex-end;
   padding: 20px;
 `
 
 export const BodyContainer = styled.View`
-  flex: 0 0 100px;
+  flex: 1;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -34,36 +36,46 @@ export const CloseButton = styled.TouchableOpacity`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #191d38
-  border-radius: ${scale(15)};
+  background: #ffffff;
+  border: 1px solid #191d38;
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
 `
 
 export const CloseText = styled.Text`
-  color: #fff;
-  font-weight: 300;
+  color: #191d38;
+  font-weight: 500;
   font-size: ${scale(20)};
-  line-height: ${scale(20)};
-  padding: ${scale(5)} ${scale(9)};
   text-align: center;
-`
-export const ModalTitleContainer = styled.View`
-  flex: 1;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 20px;
-`
-export const ModalTitle = styled.Text`
-  color: #fff;
-  font-family: habichat;
-  font-size: ${scale(30)};
+  margin-top: -4px;
+  margin-right: -2px;
 `
 
-export const ModalInputContainer = styled.View`
+export const SlideContainer = styled.View`
   flex: 1;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  padding: 20px;
-  background: orange;
+`
+
+export const SlideImage = styled.Image`
+  height: 300px;
+  width: 300px;
+`
+
+export const SlideTitle = styled.Text`
+  font-size: 30px;
+  font-family: habichat;
+  text-align: center;
+  color: #191d38;
+  margin-bottom: 20px;
+`
+
+export const SlideText = styled.Text`
+  font-size: 15px;
+  color: #191d38;
+  text-align: center;
+  padding: 10px 45px;
 `
