@@ -15,7 +15,7 @@ export const signOut = () => ({
   type: 'SIGN_OUT'
 })
 
-export const saveContent = content => ({
+export const saveContent = (content) => ({
   type: 'SAVE_CONTENT',
   content
 })
@@ -32,7 +32,7 @@ export const toggleModal = () => ({
   type: 'TOGGLE_MODAL'
 })
 
-const initialAppState = { noInternet: false, showModal: true }
+const initialAppState = { noInternet: false, showModal: false }
 const initialAuthState = { signedIn: false }
 const initialContentState = mockContent
 const initialProfileState = mockProfile

@@ -15,7 +15,7 @@ export const ModalContainer = styled.View`
 `
 
 export const HeaderContainer = styled.View`
-  flex: 0 0 50px;
+  flex: 0 0 70px;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -27,29 +27,18 @@ export const BodyContainer = styled.View`
   flex: 1;
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: stretch;
+  justify-content: center;
   padding: 20px;
+  overflow: hidden;
 `
 
 export const CloseButton = styled.TouchableOpacity`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ffffff;
-  border: 1px solid #191d38;
-  height: 30px;
-  width: 30px;
-  border-radius: 15px;
-`
-
-export const CloseText = styled.Text`
-  color: #191d38;
-  font-weight: 500;
-  font-size: ${scale(20)};
-  text-align: center;
-  margin-top: -4px;
-  margin-right: -2px;
+  height: 35px;
+  width: 35px;
 `
 
 export const SlideContainer = styled.View`
@@ -78,4 +67,29 @@ export const SlideText = styled.Text`
   color: #191d38;
   text-align: center;
   padding: 10px 45px;
+`
+
+export const SignInButton = styled.TouchableOpacity`
+  width: 100%;
+  border-radius: ${scale(30)};
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  padding: ${scale(12)};
+  background: #191d38;
+  border: 1px solid #fff;
+  margin-top: 20px;
+`
+
+export const SignInButtonText = styled.Text`
+  font-size: ${scale(16)};
+  font-weight: 500;
+  color: #fff;
+`
+
+export const EmailInput = styled.TextInput`
+  width: 100%;
+  height: 35px;
+  text-align: center;
+  border: 1px solid #191d38;
 `

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { StatusBar, Linking } from 'react-native'
 import { useDispatch } from 'react-redux'
 import Modal from 'components/Modal/Modal'
@@ -8,6 +8,7 @@ import * as S from './styles/signIn.style'
 
 const SignIn = () => {
   const dispatch = useDispatch()
+  const [showOnboarding, toggleOnboarding] = useState(true)
   return (
     <S.SignIn behavior="padding" enabled>
       {/* Status Bar */}
@@ -30,10 +31,18 @@ const SignIn = () => {
 
       {/* Buttons Container */}
       <S.ButtonsContainer>
-        <S.ButtonSignIn onPress={() => dispatch({ type: 'SIGN_IN' })}>
+        <S.ButtonSignIn
+          onPress={() => {
+            toggleOnboarding(false)
+            dispatch({ type: 'TOGGLE_MODAL' })
+          }}>
           <S.TextWhite>Sign In</S.TextWhite>
         </S.ButtonSignIn>
-        <S.ButtonRegister onPress={() => dispatch({ type: 'TOGGLE_MODAL' })}>
+        <S.ButtonRegister
+          onPress={() => {
+            toggleOnboarding(true)
+            dispatch({ type: 'TOGGLE_MODAL' })
+          }}>
           <S.TextBlack>Register</S.TextBlack>
         </S.ButtonRegister>
       </S.ButtonsContainer>
@@ -49,7 +58,7 @@ const SignIn = () => {
       </S.LinksContainer>
 
       {/* Modal */}
-      <Modal />
+      <Modal showOnboarding={showOnboarding} />
     </S.SignIn>
   )
 }
