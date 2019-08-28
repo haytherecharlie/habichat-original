@@ -28,11 +28,15 @@ export const noInternet = () => ({
   type: 'NO_INTERNET'
 })
 
-export const toggleModal = () => ({
-  type: 'TOGGLE_MODAL'
+export const toggleOnboardingModal = () => ({
+  type: 'TOGGLE_ONBOARDING_MODAL'
 })
 
-const initialAppState = { noInternet: false, showModal: false }
+export const toggleSignInModal = () => ({
+  type: 'TOGGLE_SIGN_IN_MODAL'
+})
+
+const initialAppState = { noInternet: false, showOnboardingModal: false, showSignInModal: false }
 const initialAuthState = { signedIn: false }
 const initialContentState = mockContent
 const initialProfileState = mockProfile
@@ -44,10 +48,15 @@ const rootReducer = combineReducers({
           ...state,
           noInternet: true
         }
-      case 'TOGGLE_MODAL':
+      case 'TOGGLE_ONBOARDING_MODAL':
         return {
           ...state,
-          showModal: !state.showModal
+          showOnboardingModal: !state.showOnboardingModal
+        }
+      case 'TOGGLE_SIGN_IN_MODAL':
+        return {
+          ...state,
+          showSignInModal: !state.showSignInModal
         }
       default:
         return state

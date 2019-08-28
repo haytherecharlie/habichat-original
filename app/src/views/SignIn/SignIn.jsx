@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { StatusBar, Linking } from 'react-native'
 import { useDispatch } from 'react-redux'
 import Modal from 'components/Modal/Modal'
@@ -8,12 +8,10 @@ import * as S from './styles/signIn.style'
 
 const SignIn = () => {
   const dispatch = useDispatch()
-  const [showOnboarding, toggleOnboarding] = useState(true)
   return (
     <S.SignIn behavior="padding" enabled>
       {/* Status Bar */}
       <StatusBar barStyle="light-content" />
-
       {/* Video Background */}
       <S.VideoBackground
         source={hcCityWallpaper}
@@ -23,42 +21,30 @@ const SignIn = () => {
         shouldPlay
         isLooping
       />
-
       {/* Logo Container */}
       <S.LogoContainer>
         <S.ImageLogo source={outlineLogo} alt="white logo" />
       </S.LogoContainer>
-
       {/* Buttons Container */}
       <S.ButtonsContainer>
-        <S.ButtonSignIn
-          onPress={() => {
-            toggleOnboarding(false)
-            dispatch({ type: 'TOGGLE_MODAL' })
-          }}>
-          <S.TextWhite>Sign In</S.TextWhite>
+        <S.ButtonSignIn onPress={() => dispatch({ type: 'TOGGLE_SIGN_IN_MODAL' })}>
+          <S.TextWhite>{`Sign In / Register`}</S.TextWhite>
         </S.ButtonSignIn>
-        <S.ButtonRegister
-          onPress={() => {
-            toggleOnboarding(true)
-            dispatch({ type: 'TOGGLE_MODAL' })
-          }}>
-          <S.TextBlack>Register</S.TextBlack>
+        <S.ButtonRegister onPress={() => dispatch({ type: 'TOGGLE_ONBOARDING_MODAL' })}>
+          <S.TextBlack>{`Learn More`}</S.TextBlack>
         </S.ButtonRegister>
       </S.ButtonsContainer>
-
       {/* Links Container */}
       <S.LinksContainer>
         <S.TextLink onPress={() => Linking.openURL('https://habi.chat/privacy-policy')}>
-          Privacy Policy
+          {`Privacy Policy`}
         </S.TextLink>
         <S.TextLink onPress={() => Linking.openURL('https://habi.chat/terms-of-service')}>
-          Terms of Service
+          {`Terms of Service`}
         </S.TextLink>
       </S.LinksContainer>
-
       {/* Modal */}
-      <Modal showOnboarding={showOnboarding} />
+      <Modal />
     </S.SignIn>
   )
 }
