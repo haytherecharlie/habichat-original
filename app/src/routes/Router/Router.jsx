@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import * as Font from 'expo-font'
 import { useSelector } from 'react-redux'
 import Loading from 'components/Loading/Loading'
-import AuthenticatedRouter from 'routes/AuthenticatedRouter/AuthenticatedRouter'
-import UnauthenticatedRouter from 'routes/UnauthenticatedRouter/UnauthenticatedRouter'
+// import AuthenticatedRouter from 'routes/AuthenticatedRouter/AuthenticatedRouter'
+// import UnauthenticatedRouter from 'routes/UnauthenticatedRouter/UnauthenticatedRouter'
+import Master from 'src/blueprint/Master'
 
 const Router = () => {
   const { signedIn } = useSelector(s => s.auth)
@@ -19,9 +20,10 @@ const Router = () => {
   }
 
   return staticAppContent
-    ? signedIn
-      ? <AuthenticatedRouter/>
-      : <UnauthenticatedRouter />
+    // ? signedIn
+    //   ? <AuthenticatedRouter/>
+    //   : <UnauthenticatedRouter />
+    ? <Master/>
     : <Loading />
 }
 

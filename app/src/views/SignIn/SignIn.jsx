@@ -27,7 +27,7 @@ const SignIn = () => {
       </S.LogoContainer>
       {/* Buttons Container */}
       <S.ButtonsContainer>
-        <S.ButtonSignIn onPress={() => dispatch({ type: 'TOGGLE_SIGN_IN_MODAL' })}>
+        <S.ButtonSignIn onPress={() => dispatch({ type: 'SIGN_IN' })}>
           <S.TextWhite>{`Sign In / Register`}</S.TextWhite>
         </S.ButtonSignIn>
         <S.ButtonRegister onPress={() => dispatch({ type: 'TOGGLE_ONBOARDING_MODAL' })}>
